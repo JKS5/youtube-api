@@ -1,21 +1,25 @@
 import "./App.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   QueryClient,
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
+import Home from "./Pages/Home";
+import NotFound from "./Pages/NotFound";
+import Videos from "./Pages/Videos";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <p>Home</p>,
+    element: <Home />,
+    errorElement: <NotFound />,
   },
   {
     patch: "videos",
-    element: <p>Videos</p>,
+    element: <Videos />,
+    errorElement: <NotFound />,
   },
 ]);
 
