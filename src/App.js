@@ -8,18 +8,23 @@ import {
 import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
 import Videos from "./Pages/Videos";
+import Root from "./Pages/Root";
+import VideoDetail from "./Pages/VideoDetail";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Root />,
     errorElement: <NotFound />,
-  },
-  {
-    patch: "videos",
-    element: <Videos />,
-    errorElement: <NotFound />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      { path: "/videos", element: <Videos /> },
+      { path: "/videos/:videoId", element: <VideoDetail /> },
+    ],
   },
 ]);
 

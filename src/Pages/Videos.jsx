@@ -1,5 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Videos() {
-  return <div>Videos</div>;
+  return <div>Video show the search result.</div>;
 }
