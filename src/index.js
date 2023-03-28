@@ -1,12 +1,15 @@
+import "./index.css";
+
+import reportWebVitals from "./reportWebVitals";
+// Libraries
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+//Components, Pages
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import VideoDetail from "./Pages/VideoDetail";
 import Videos from "./Pages/Videos";
 import NotFound from "./Pages/NotFound";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,7 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
