@@ -4,29 +4,31 @@ import reportWebVitals from "./reportWebVitals";
 // Libraries
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Components, Pages
 import App from "./App";
-import VideoDetail from "./Pages/VideoDetail";
 import Videos from "./Pages/Videos";
-import NotFound from "./Pages/NotFound";
+import VideosDetail from "./Pages/VideosDetail";
+import ErrorElement from "./Pages/ErrorElement";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    patch: "/",
     element: <App />,
-    errorElement: <NotFound />,
+    errorElement: <ErrorElement />,
     children: [
       { index: true, element: <Videos /> },
-      { path: "/videos", element: <Videos /> },
-      { path: "/videos/:keyword", element: <Videos /> },
-      { path: "/videos/watch/:videoId", element: <VideoDetail /> },
+      // 키워드의 검색없을때 인기 추천 비디오들
+      { path: "videos", element: <Videos /> },
+      // 비디오중 검색시 검색된 비디오들
+      { path: "videos/:keyword", element: <Videos /> },
+      // 비디오 클릭시 비디오 디테일
+      { path: "videos/watch/:videoId", element: <VideosDetail /> },
     ],
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
