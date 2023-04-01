@@ -5,25 +5,22 @@ import reportWebVitals from "./reportWebVitals";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//Components, Pages
+
 import App from "./App";
 import Videos from "./Pages/Videos";
-import VideosDetail from "./Pages/VideosDetail";
-import ErrorElement from "./Pages/ErrorElement";
+import VideoDetail from "./Pages/VideoDetail";
+import NotFound from "./Pages/NotFound";
 
 const router = createBrowserRouter([
   {
-    patch: "/",
+    path: "/",
     element: <App />,
-    errorElement: <ErrorElement />,
+    ErrorElement: <NotFound />,
     children: [
-      { index: true, element: <Videos /> },
-      // 키워드의 검색없을때 인기 추천 비디오들
+      { path: "/", element: <Videos /> },
       { path: "videos", element: <Videos /> },
-      // 비디오중 검색시 검색된 비디오들
       { path: "videos/:keyword", element: <Videos /> },
-      // 비디오 클릭시 비디오 디테일
-      { path: "videos/watch/:videoId", element: <VideosDetail /> },
+      { path: "videos/watch/:videoId", element: <VideoDetail /> },
     ],
   },
 ]);
