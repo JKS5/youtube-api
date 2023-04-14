@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import VideoCard from "../components/VideoCard";
+import axios from "axios";
 
 export default function Videos() {
   const { keyword } = useParams();
@@ -13,9 +14,22 @@ export default function Videos() {
     isSuccess,
     data: videos, //여기에 들어감.
   } = useQuery(["vidoes", keyword], async () => {
-    return fetch(`/videos/${keyword ? "search" : "popular"}.json`)
-      .then((response) => response.json())
-      .then((data) => data.items); // data의 items를 return 해서 위
+    return axios
+      .get(`/videos/${keyword ? "search" : "popular"}.json`)
+      .then((response) => {
+        console.log(response);
+        console.log(response.data);
+        return response.data.items;
+      });
+
+    // axios 안쓸때
+    // return fetch(`/videos/${keyword ? "search" : "popular"}.json`)
+    //   .then((response) => {
+    //     console.log(response);
+
+    //     return response.json();
+    //   })
+    //   .then((data) => data.items); // data의 items를 return 해서 위
   });
 
   console.log(keyword);
