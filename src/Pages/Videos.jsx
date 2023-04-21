@@ -10,6 +10,7 @@ import { useYoutubeApi } from "../context/YoutubeApiContext";
 export default function Videos() {
   const { keyword } = useParams();
   const { youtube } = useYoutubeApi();
+
   const {
     error,
     data: videos,
