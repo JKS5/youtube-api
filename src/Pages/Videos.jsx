@@ -16,7 +16,10 @@ export default function Videos() {
     isLoading,
   } = useQuery(
     ["videos", keyword],
-    () => youtube.search(keyword)
+    () => {
+      // const youtube = new FakeYoutube();
+      return youtube.search(keyword);
+    }
 
     // {  이 방법은 Context 쓰지 않을때 일일히  밑 코드를 바꿔주어야 한다.
     //   const youtube = new FakeYoutube();
