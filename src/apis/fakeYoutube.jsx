@@ -8,10 +8,11 @@ export default class FakeYoutube {
   }
   async #searchByKeyword(keyword) {
     return axios
-      .get(`/videos/searched.json`)
+      .get(`/videos/search.json`)
       .then((res) => res.data.items)
       .then((items) => {
-        items.map((item) => ({ ...item, id: item.id.videoId }));
+        console.log(items);
+        return items.map((item) => ({ ...item, id: item.id.videoId }));
       });
     // .then((res) => {
     //   console.log(res.data.items);

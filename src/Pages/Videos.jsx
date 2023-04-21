@@ -4,18 +4,25 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import VideoCard from "../components/VideoCard";
 import FakeYoutube from "../apis/fakeYoutube";
+import Youtube from "../apis/youtube";
+import { useYoutubeApi } from "../context/YoutubeApiContext";
 
 export default function Videos() {
   const { keyword } = useParams();
-
+  const { youtube } = useYoutubeApi();
   const {
     error,
     data: videos,
     isLoading,
-  } = useQuery(["videos", keyword], () => {
-    const youtube = new FakeYoutube();
-    return youtube.search(keyword);
-  });
+  } = useQuery(
+    ["videos", keyword],
+    () => youtube.search(keyword)
+
+    // {  이 방법은 Context 쓰지 않을때 일일히  밑 코드를 바꿔주어야 한다.
+    //   const youtube = new FakeYoutube();
+    //   return youtube.search(keyword);
+    // }
+  );
 
   console.log({ videos });
 
