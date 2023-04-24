@@ -43,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router-dom", "virtual:9dbdc4263005c4d7573c7fdac40a15a3a94cc0d001386b0bdca25bc6a8d3517d35459423e64e95c752d551e236706b167134258f4ec1324eaf5d33f8ebc0c55b#npm:6.8.2"],\
             ["react-scripts", "virtual:9dbdc4263005c4d7573c7fdac40a15a3a94cc0d001386b0bdca25bc6a8d3517d35459423e64e95c752d551e236706b167134258f4ec1324eaf5d33f8ebc0c55b#npm:5.0.1"],\
             ["tailwindcss", "virtual:9dbdc4263005c4d7573c7fdac40a15a3a94cc0d001386b0bdca25bc6a8d3517d35459423e64e95c752d551e236706b167134258f4ec1324eaf5d33f8ebc0c55b#npm:3.3.0"],\
+            ["timeago.js", "npm:4.0.2"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
           "linkType": "SOFT"\
@@ -16671,6 +16672,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["timeago.js", [\
+        ["npm:4.0.2", {\
+          "packageLocation": "./.yarn/cache/timeago.js-npm-4.0.2-e87d64f9a3-c785a06988.zip/node_modules/timeago.js/",\
+          "packageDependencies": [\
+            ["timeago.js", "npm:4.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["tmpl", [\
         ["npm:1.0.5", {\
           "packageLocation": "./.yarn/cache/tmpl-npm-1.0.5-d399ba37e2-cd922d9b85.zip/node_modules/tmpl/",\
@@ -18010,6 +18020,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router-dom", "virtual:9dbdc4263005c4d7573c7fdac40a15a3a94cc0d001386b0bdca25bc6a8d3517d35459423e64e95c752d551e236706b167134258f4ec1324eaf5d33f8ebc0c55b#npm:6.8.2"],\
             ["react-scripts", "virtual:9dbdc4263005c4d7573c7fdac40a15a3a94cc0d001386b0bdca25bc6a8d3517d35459423e64e95c752d551e236706b167134258f4ec1324eaf5d33f8ebc0c55b#npm:5.0.1"],\
             ["tailwindcss", "virtual:9dbdc4263005c4d7573c7fdac40a15a3a94cc0d001386b0bdca25bc6a8d3517d35459423e64e95c752d551e236706b167134258f4ec1324eaf5d33f8ebc0c55b#npm:3.3.0"],\
+            ["timeago.js", "npm:4.0.2"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
           "linkType": "SOFT"\

@@ -1,14 +1,17 @@
 import React from "react";
-import useUploadDate from "../Hooks/useUploadDate";
+import { formatAgo } from "../utils/date";
 
 export default function VideoCard({ video }) {
-  const uploadDate = useUploadDate(video.snippet.publishedAt);
+  const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
+
   return (
-    <div>
-      <img src={video.snippet.thumbnails.default.url} alt="thumnail"></img>
-      <p>{video.snippet.title}</p>
-      <p>{video.snippet.channelTitle}</p>
-      <p>{uploadDate}</p>
-    </div>
+    <li>
+      <img src={thumbnails.medium.url} alt="thumnail"></img>
+      <div>
+        <p>{title}</p>
+        <p>{channelTitle}</p>
+        <p>{formatAgo(publishedAt, "ko")}</p>
+      </div>
+    </li>
   );
 }
