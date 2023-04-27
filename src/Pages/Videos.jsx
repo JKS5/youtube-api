@@ -28,11 +28,10 @@ export default function Videos() {
     // }
   );
 
-  console.log({ videos });
+  // console.log({ videos });
 
   return (
     <div>
-      <div>{keyword ? `${keyword} searched` : "popular"}</div>
       {isLoading && <div>Loading...</div>}
       {error && <div>Error!!!</div>}
       {videos && (
