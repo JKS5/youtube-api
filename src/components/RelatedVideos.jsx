@@ -23,7 +23,6 @@ export default function RelatedVideos({ id }) {
           ))}
         </ul>
       )}
-      <p>slsajflksjldflkjfljdslafdjdf</p>
     </>
   );
 }

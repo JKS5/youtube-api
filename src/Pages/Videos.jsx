@@ -29,8 +29,6 @@ export default function Videos() {
           ))}
         </ul>
       )}
-
-      <div>Videos</div>
     </div>
   );
 }
