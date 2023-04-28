@@ -1,4 +1,3 @@
-import axios from "axios";
 //✅
 export default class Youtube {
   constructor(apiClient) {
