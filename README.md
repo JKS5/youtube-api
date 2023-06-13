@@ -1,6 +1,6 @@
 # Youtube API Portfolio
 Youtube API를 사용한 간단한 웹사이트입니다.
-
+URL : https://delightful-jelly-6cb144.netlify.app/
 ---------------
 A simple Website using the Yotube API.
 
@@ -22,4 +22,4 @@ Deployment: Netfliy
 1. 동영상을 클릭하거나, 단어를를 검색한 후, 보고싶은 동영상을 클릭한다.
 
 ------------------
-1. 동영상을 클릭하거나, 단어를를 검색한 후, 보고싶은 동영상을 클릭한다.
+1. click Video, or search for a word, and then click the video you want to watch.
